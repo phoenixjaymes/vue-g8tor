@@ -1,10 +1,19 @@
 <template>
   <footer class="main-footer">
     <nav class="navbar navbar-full">
-      <small>&copy; 2016 the G8TOR</small>
+      <small>&copy; {{ currentYear }} PhoenixJaymes</small>
     </nav>
   </footer>
 </template>
+
+<script>
+export default {
+  name: 'TheFooter',
+  data() {
+    return { currentYear: new Date().getFullYear() };
+  },
+}
+</script>
 
 <style>
   .main-footer {
